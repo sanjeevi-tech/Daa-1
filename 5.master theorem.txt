@@ -1,0 +1,9 @@
+def master_theorem(a, b, k):
+    if a > b ** k:
+        return "T(n) = Θ(n^log_{%d}(%d))" % (b, a)
+    elif a == b ** k:
+        return "T(n) = Θ(n^log_{%d}(%d) * log(n))" % (b, a)
+    else:
+        return "T(n) = Θ(n^%d)" % k
+
+print(master_theorem(3, 2, 1))
